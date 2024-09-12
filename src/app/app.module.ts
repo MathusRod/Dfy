@@ -19,6 +19,14 @@ import {MatToolbarModule} from '@angular/material/toolbar'
 import {MatSnackBarModule} from '@angular/material/snack-bar'
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatDatepickerModule} from '@angular/material/datepicker'
+import { CalendarModule } from 'primeng/calendar';
+import { SairComponent } from './modals/perfil/sair/sair.component';
+import { EditarPerfilComponent } from './modals/perfil/editar-perfil/editar-perfil.component';
+import { ModalPerfilComponent } from './modals/perfil/modal-perfil/modal-perfil.component';
+import { CriarEventoComponent } from './modals/evento/criar-evento/criar-evento.component';
+import { EditarEventoComponent } from './modals/evento/editar-evento/editar-evento.component';
+import { DetalhesEventoComponent } from './modals/evento/detalhes-evento/detalhes-evento.component';
+
 
 
 @NgModule({
@@ -26,7 +34,13 @@ import {MatDatepickerModule} from '@angular/material/datepicker'
     AppComponent,
     LoginComponent,
     HomeComponent,
-    RegistrarComponent
+    RegistrarComponent,
+    SairComponent,
+    EditarPerfilComponent,
+    ModalPerfilComponent,
+    CriarEventoComponent,
+    EditarEventoComponent,
+    DetalhesEventoComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +56,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker'
     MatToolbarModule,
     MatSnackBarModule,
     MatNativeDateModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    CalendarModule
   ],
   providers: [
     provideClientHydration(),
