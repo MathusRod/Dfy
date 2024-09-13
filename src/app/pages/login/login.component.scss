@@ -1,11 +1,6 @@
 @import "../../shared/mixin";
 .container {
-  width: 100vw;
-  height: 100vh;
-  @include flexColumn;
-  align-items: center;
-  padding-top: 100px;
-  gap: 52px;
+  @include containerPadrao;
   .container-logo {
     display: flex;
     gap: 25px;
@@ -37,7 +32,7 @@
     .container-login-input {
       form {
         @include flexColumn;
-        .campo-input{
+        .campo-input {
           @include flexColumn;
           label {
             font-size: 20px;
@@ -52,7 +47,7 @@
             border: 2px solid #424242;
             font-size: 18px;
             padding: 10px;
-            
+
             &.error {
               border-color: red;
             }
@@ -71,10 +66,7 @@
               bottom: 30%;
             }
           }
-          
         }
-        
-        
       }
       .links {
         display: flex;
@@ -90,11 +82,10 @@
       background-color: #424242;
       width: 159px;
       height: 40px;
-      p {
-        color: #fff;
-        font-size: 18px;
-        font-weight: normal;
-      }
+      text-align: center;
+      color: #fff;
+      font-size: 18px;
+      font-weight: normal;
     }
   }
 }

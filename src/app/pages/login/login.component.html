@@ -11,12 +11,6 @@
         <div class="campo-input">
           <label for="email">Email</label>
           <input type="email" id="email" formControlName="email" [class.error]="(formLogin.get('email')?.hasError('email') || formLogin.get('email')?.hasError('required')) && formLogin.get('email')?.touched">
-          <!-- <mat-error *ngIf="formLogin.get('email')?.hasError('email') && formLogin.get('email')?.touched">
-            Por favor informe um email válido
-          </mat-error>
-          <mat-error *ngIf="formLogin.get('email')?.hasError('required') && formLogin.get('email')?.touched">
-            Email é <strong>obrigatório</strong>
-          </mat-error> -->
         </div>
         <div class="campo-input">
           <label for="senha">Senha</label>
@@ -25,19 +19,14 @@
             <img src="../../../assets/Eye.svg" alt="">
           </button>
         </div>
-        <!-- <mat-error *ngIf="formLogin.get('senha')?.invalid && formLogin.get('senha')?.touched">Senha é
-          <strong>obrigatória</strong>
-        </mat-error> -->
         <div class="links">
           <a routerLink="/registrar">Fazer cadastro</a>
-          <a href="">Esqueci a senha</a>
+          <a routerLink="/recuperar-senha">Esqueci a senha</a>
         </div>
       </form>
-
-      
     </div>
     <button class="logar" (click)="logar()">
-      <p>Login</p>
+      Login
     </button>
   </div>
 </div>

@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { UsuarioService } from '../../services/usuario.service';
+import { MatDialog } from '@angular/material/dialog';
+import { CriarEventoComponent } from '../../modals/evento/criar-evento/criar-evento.component';
 
 @Component({
   selector: 'app-home',
@@ -24,5 +26,11 @@ export class HomeComponent {
     if(this.modalPefilOpen){
       this.modalPefilOpen = !this.modalPefilOpen
     }
+  }
+
+  readonly dialog = inject(MatDialog).open(CriarEventoComponent,{disableClose:true});
+  
+  openCriarEvento() {
+    // this.dialog.open(CriarEventoComponent);
   }
 }

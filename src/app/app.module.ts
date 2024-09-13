@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+import {
+  BrowserModule,
+  provideClientHydration,
+} from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -10,25 +13,23 @@ import { HomeComponent } from './pages/home/home.component';
 import { RegistrarComponent } from './pages/registrar/registrar.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
-import { MatCardModule  } from '@angular/material/card'
-import {MatInputModule} from '@angular/material/input'
-import {MatButtonModule} from '@angular/material/button'
-import {MatSidenavModule} from '@angular/material/sidenav'
-import {MatIconModule} from '@angular/material/icon'
-import {MatToolbarModule} from '@angular/material/toolbar'
-import {MatSnackBarModule} from '@angular/material/snack-bar'
-import { MatNativeDateModule } from '@angular/material/core';
-import {MatDatepickerModule} from '@angular/material/datepicker'
-import { CalendarModule } from 'primeng/calendar';
 import { SairComponent } from './modals/perfil/sair/sair.component';
 import { EditarPerfilComponent } from './modals/perfil/editar-perfil/editar-perfil.component';
 import { ModalPerfilComponent } from './modals/perfil/modal-perfil/modal-perfil.component';
 import { CriarEventoComponent } from './modals/evento/criar-evento/criar-evento.component';
 import { EditarEventoComponent } from './modals/evento/editar-evento/editar-evento.component';
 import { DetalhesEventoComponent } from './modals/evento/detalhes-evento/detalhes-evento.component';
-
-
-
+import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { CalendarModule } from 'primeng/calendar';
+import { RecuperarSenhaComponent } from './pages/recuperar-senha/recuperar-senha.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +41,8 @@ import { DetalhesEventoComponent } from './modals/evento/detalhes-evento/detalhe
     ModalPerfilComponent,
     CriarEventoComponent,
     EditarEventoComponent,
-    DetalhesEventoComponent
+    DetalhesEventoComponent,
+    RecuperarSenhaComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,6 +65,6 @@ import { DetalhesEventoComponent } from './modals/evento/detalhes-evento/detalhe
     provideClientHydration(),
     provideAnimationsAsync()
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

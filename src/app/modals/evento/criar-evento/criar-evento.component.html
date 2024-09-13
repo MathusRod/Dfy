@@ -1,1 +1,30 @@
-<p>criar-evento works!</p>
+<div class="container">
+  <h1>Criar novo evento</h1>
+  <form>
+    <div class="input-nome-evento">
+      <label for="nomeEvento">Nome do evento</label>
+      <input type="text" id="nomeEvento">
+    </div>
+    <div class="data-hora">
+      <div class="data">
+        <label for="data">
+          Data
+        </label>
+        <input matInput [matDatepicker]="datepicker">
+        <mat-datepicker-toggle matIconSuffix [for]="datepicker"></mat-datepicker-toggle>
+        <mat-datepicker #datepicker>
+          <mat-datepicker-actions>
+            <button mat-button matDatepickerCancel>Cancelar</button>
+            <button mat-raised-button matDatepickerApply>Aplicar</button>
+          </mat-datepicker-actions>
+        </mat-datepicker>
+      </div>
+      <div class="hora">
+        <label for="hora">
+          Horário
+          <input type="time" placeholder="Horário (HH:mm)">
+        </label>
+      </div>
+    </div>
+  </form>
+</div>

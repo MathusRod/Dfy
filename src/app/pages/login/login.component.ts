@@ -14,8 +14,7 @@ export class LoginComponent implements OnInit{
   formLogin: FormGroup;
   inputPasswordType: string = "password"
   constructor(private formBuilder: FormBuilder,
-              private usuarioService: UsuarioService,
-              private snackBar: MatSnackBar){
+              private usuarioService: UsuarioService){
               }
   ngOnInit(): void {
     this.criarForm();
