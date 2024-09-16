@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-editar-evento',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrl: './editar-evento.component.scss'
 })
 export class EditarEventoComponent {
+  readonly dialog = inject(MatDialog)
 
+  close(){
+    this.dialog.closeAll()
+  }
+  salvar(){
+    this.close()
+  }
 }

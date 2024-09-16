@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { UsuarioService } from '../../services/usuario.service';
 import { MatDialog } from '@angular/material/dialog';
 import { CriarEventoComponent } from '../../modals/evento/criar-evento/criar-evento.component';
+import { DetalhesEventoComponent } from '../../modals/evento/detalhes-evento/detalhes-evento.component';
 
 @Component({
   selector: 'app-home',
@@ -28,9 +29,12 @@ export class HomeComponent {
     }
   }
 
-  readonly dialog = inject(MatDialog).open(CriarEventoComponent,{disableClose:true});
+  readonly dialog = inject(MatDialog)
   
   openCriarEvento() {
-    // this.dialog.open(CriarEventoComponent);
+    this.dialog.open(CriarEventoComponent);
+  }
+  openDetalhes(){
+    this.dialog.open(DetalhesEventoComponent)
   }
 }

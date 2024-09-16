@@ -1,30 +1,44 @@
 <div class="container">
   <h1>Criar novo evento</h1>
   <form>
-    <div class="input-nome-evento">
-      <label for="nomeEvento">Nome do evento</label>
+    <div class="input-nome-evento div-input">
+      <label for="nomeEvento" class="titulo">Nome do evento</label>
       <input type="text" id="nomeEvento">
     </div>
-    <div class="data-hora">
-      <div class="data">
-        <label for="data">
+    <div class="data-hora ">
+      <div class="data div-input">
+        <label for="data" class="titulo">
           Data
         </label>
-        <input matInput [matDatepicker]="datepicker">
+        <input [matDatepicker]="datepicker" disabled>
         <mat-datepicker-toggle matIconSuffix [for]="datepicker"></mat-datepicker-toggle>
-        <mat-datepicker #datepicker>
+        <mat-datepicker #datepicker disabled="false">
           <mat-datepicker-actions>
             <button mat-button matDatepickerCancel>Cancelar</button>
             <button mat-raised-button matDatepickerApply>Aplicar</button>
           </mat-datepicker-actions>
         </mat-datepicker>
       </div>
-      <div class="hora">
-        <label for="hora">
+      <div class="hora div-input">
+        <label for="hora" class="titulo">
           Horário
-          <input type="time" placeholder="Horário (HH:mm)">
         </label>
+        <input type="time">
       </div>
     </div>
+    <!-- <div class="lembretes div-input">
+      <p class="titulo">lembretes</p>
+    </div> -->
+    <div class="descricao div-input">
+      <p class="titulo">Descrição</p>
+      <textarea name="descricao" id="descricao" maxlength="237"></textarea>
+    </div>
+    <div class="add-convidados div-input">
+      <label for="email" class="titulo">Adicionar convidados</label>
+      <input type="email" id="email" placeholder="Email">
+      <img src="../../../../assets/add _ create.svg" alt="">
+    </div>
   </form>
+  <button class="salvar" (click)="salvar()">Salvar</button>
+  <img class="close" src="../../../../assets/close _ cancel.svg" alt="" (click)="close()">
 </div>
