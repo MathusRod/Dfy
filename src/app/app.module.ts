@@ -30,6 +30,8 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { CalendarModule } from 'primeng/calendar';
 import { RecuperarSenhaComponent } from './pages/recuperar-senha/recuperar-senha.component';
+import { DataTransformPipe } from './shared/pipes/data-transform.pipe';
+import { DatePipe } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,6 +45,7 @@ import { RecuperarSenhaComponent } from './pages/recuperar-senha/recuperar-senha
     EditarEventoComponent,
     DetalhesEventoComponent,
     RecuperarSenhaComponent,
+    DataTransformPipe,
   ],
   imports: [
     BrowserModule,
@@ -63,7 +66,8 @@ import { RecuperarSenhaComponent } from './pages/recuperar-senha/recuperar-senha
   ],
   providers: [
     provideClientHydration(),
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    DatePipe
   ],
   bootstrap: [AppComponent],
 })

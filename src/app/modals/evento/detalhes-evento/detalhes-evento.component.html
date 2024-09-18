@@ -1,20 +1,20 @@
 <div class="container">
   <form>
     <div class="input-nome-evento div-input">
-      <h1>Nome do evento test</h1>
+      <h1>{{ salvarOsEventos[id].nome }}</h1>
     </div>
     <div class="data-hora ">
       <div class="data div-input">
         <h2 for="data" class="titulo">
           Data
         </h2>
-        <p>09/17/2024</p>
+        <p>{{ salvarOsEventos[id].data | date: 'dd/MM/yyyy' }}</p>
       </div>
       <div class="hora div-input">
         <h2 for="hora" class="titulo">
           Horário
         </h2>
-        <p>20 : 30</p>
+        <p>{{ salvarOsEventos[id].horario }}</p>
       </div>
     </div>
     <!-- <div class="lembretes div-input">
@@ -22,9 +22,14 @@
     </div> -->
     <div class="descricao div-input">
       <p class="titulo">Descrição</p>
-      <textarea name="descricao" id="descricao" maxlength="237" readonly>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit iure minima provident at dignissimos veritatis nihil molestias, eius eligendi voluptatem numquam facere laboriosam ducimus eveniet dolores distinctio placeat ipsam doloribus.</textarea>
+      @if(salvarOsEventos[id].descricao.length > 1){
+        <textarea name="descricao" id="descricao" maxlength="237" readonly>{{ salvarOsEventos[id].descricao }}</textarea>
+      } @else {
+        <textarea name="descricao" id="descricao" maxlength="237" readonly>Nenhuma descrição</textarea>
+      }
+      
     </div>
-    <div class="convidados div-input">
+    <!-- <div class="convidados div-input">
       <h2 for="email" class="titulo">Convidados</h2>
       <ul>
         <div class="container-list">
@@ -33,7 +38,7 @@
           <li>usuario 3</li>
         </div>
       </ul>
-    </div>
+    </div> -->
   </form>
   <button class="Editar" (click)="openEditarEvento()">Editar Evento</button>
   <img class="close" src="../../../../assets/close _ cancel.svg" alt="" (click)="close()">

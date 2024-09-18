@@ -33,7 +33,7 @@ export class UsuarioService {
   }
   private mockUsuarioLogin(usuario: IUsuario): Observable<any> {
     var retornoMock: any = [];
-    if (usuario.email === 'test@email' && usuario.senha == '123') {
+    if (usuario.email === 'dfy@email' && usuario.senha == '12345') {
       retornoMock.sucesso = true;
       retornoMock.usuario = usuario;
       retornoMock.token = 'TokenQueSeriaGeradoPelaAPI';
@@ -43,6 +43,7 @@ export class UsuarioService {
     retornoMock.usuario = usuario;
     return of(retornoMock);
   }
+
   deslogar(estado: boolean) {
     if (!estado) {
       localStorage.clear();

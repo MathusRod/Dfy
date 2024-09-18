@@ -1,7 +1,7 @@
 <div class="container">
   <div class="container-logo">
-    <!-- <img src="" alt="Logo"> -->
-    <div class="provisorio"></div>
+    <img class="provisorio" src="../../../assets/reshot-icon-calendar-number-W85XU64MP9.svg" alt="Logo">
+    <!-- <div class="provisorio"></div> -->
     <h1>Dayify</h1>
   </div>
   <div class="container-cadastro">
@@ -24,13 +24,12 @@
       </div>
       <div class="input-container">
         <label>Confirmar senha</label>
-        <input [type]="inputShowConfirmPassword" required id="confimar-senha" formControlName="confirmarSenha" [class.error]="((formRegistrar.get('confirmarSenha')?.hasError('confirmarSenha')) || (formRegistrar.get('confirmarSenha')?.hasError('required')) && formRegistrar.get('confirmarSenha')?.touched)
-        || (formRegistrar.get('senha')?.value == formRegistrar.get('confirmarSenha')?.value) && formRegistrar.get('confirmarSenha')?.touched">
+        <input [type]="inputShowConfirmPassword" required id="confimar-senha" formControlName="confirmarSenha">
         <button class="mostrar-senha confirmar" (click)="mostrarSenha(2)">
           <img src="../../../assets/Eye.svg" alt="">
         </button>
       </div>
     </form>
-    <button routerLink="/login" class="btn-cadastrar">Cadastrar</button>
+    <button class="btn-cadastrar" (click)="registrar()">Cadastrar</button>
   </div>
 </div>

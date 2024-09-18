@@ -35,6 +35,7 @@ export class LoginComponent implements OnInit{
         }
     })
   }
+  
   mostrarSenha(){
     this.inputPasswordType = this.inputPasswordType === 'password' ? 'text' : 'password'
   }
